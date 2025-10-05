@@ -46,23 +46,55 @@ function Counter({ end, duration, suffix = '', prefix = '' }: CounterProps) {
 }
 
 export default function VideoHero() {
+  const [videoError, setVideoError] = useState(false);
+
+  const handleVideoError = (e: React.SyntheticEvent<HTMLVideoElement, Event>) => {
+    console.error('Video failed to load:', e);
+    setVideoError(true);
+  };
+
+  const handleVideoLoad = () => {
+    console.log('Video loaded successfully');
+    setVideoError(false);
+  };
+
   return (
     <section style={{ height: '100vh', backgroundColor: '#1f2937', position: 'relative' }}>
       {/* Video Background */}
       <div style={{ width: '100%', height: '100vh', position: 'relative' }}>
-        <video
-          src="/homevideo.mp4"
-          autoPlay
-          muted
-          loop
-          playsInline
-          style={{ 
+        {!videoError ? (
+          <video
+            src="/homevideo.mp4"
+            autoPlay
+            muted
+            loop
+            playsInline
+            onError={handleVideoError}
+            onLoadedData={handleVideoLoad}
+            style={{ 
+              width: '100%',
+              height: '100%',
+              objectFit: 'cover',
+              display: 'block'
+            }}
+          />
+        ) : (
+          <div style={{
             width: '100%',
             height: '100%',
-            objectFit: 'cover',
-            display: 'block'
-          }}
-        />
+            backgroundColor: '#1f2937',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            color: 'white',
+            fontSize: '1.5rem'
+          }}>
+            <div className="text-center">
+              <div className="text-6xl mb-4">🏥</div>
+              <div>Medical Equipment Excellence</div>
+            </div>
+          </div>
+        )}
         {/* Video Overlay */}
         <div style={{ 
           position: 'absolute', 
