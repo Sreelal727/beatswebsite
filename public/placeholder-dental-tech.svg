@@ -1,0 +1,32 @@
+<svg width="400" height="300" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="300" fill="#f8fafc"/>
+  <rect x="50" y="50" width="300" height="200" rx="8" fill="#e2e8f0"/>
+  
+  <!-- Dental chair icon -->
+  <g transform="translate(150, 100)">
+    <!-- Chair base -->
+    <rect x="30" y="80" width="40" height="20" rx="4" fill="#64748b"/>
+    <rect x="45" y="100" width="10" height="30" fill="#64748b"/>
+    
+    <!-- Chair seat -->
+    <ellipse cx="50" cy="75" rx="25" ry="15" fill="#3b82f6"/>
+    
+    <!-- Chair back -->
+    <rect x="35" y="45" width="30" height="35" rx="15" fill="#3b82f6"/>
+    
+    <!-- Dental light -->
+    <circle cx="80" cy="30" r="8" fill="#fbbf24"/>
+    <rect x="72" y="38" width="16" height="20" fill="#6b7280"/>
+    
+    <!-- Dental tools -->
+    <rect x="10" y="60" width="2" height="25" fill="#6b7280"/>
+    <circle cx="11" cy="58" r="3" fill="#94a3b8"/>
+    <rect x="15" y="65" width="2" height="20" fill="#6b7280"/>
+    <circle cx="16" cy="63" r="3" fill="#94a3b8"/>
+  </g>
+  
+  <!-- Title -->
+  <text x="200" y="280" text-anchor="middle" fill="#475569" font-family="Arial, sans-serif" font-size="14" font-weight="600">
+    Dental Technology
+  </text>
+</svg>

@@ -1,0 +1,60 @@
+<svg width="400" height="300" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="300" fill="#f0fdf4"/>
+  <rect x="50" y="50" width="300" height="200" rx="8" fill="#dcfce7"/>
+  
+  <!-- Autoclave/Sterilizer -->
+  <g transform="translate(140, 90)">
+    <!-- Main chamber -->
+    <rect x="0" y="20" width="80" height="50" rx="6" fill="#374151"/>
+    <rect x="5" y="25" width="70" height="40" rx="4" fill="#4b5563"/>
+    
+    <!-- Door -->
+    <rect x="0" y="20" width="15" height="50" rx="6" fill="#6b7280"/>
+    <circle cx="12" cy="45" r="2" fill="#9ca3af"/>
+    
+    <!-- Control panel -->
+    <rect x="20" y="5" width="40" height="15" rx="2" fill="#1f2937"/>
+    <circle cx="30" cy="12" r="2" fill="#22c55e"/>
+    <circle cx="40" cy="12" r="2" fill="#fbbf24"/>
+    <circle cx="50" cy="12" r="2" fill="#ef4444"/>
+    
+    <!-- Steam vents -->
+    <rect x="85" y="30" width="3" height="8" rx="1" fill="#6b7280"/>
+    <rect x="85" y="42" width="3" height="8" rx="1" fill="#6b7280"/>
+    <rect x="85" y="54" width="3" height="8" rx="1" fill="#6b7280"/>
+  </g>
+  
+  <!-- Steam clouds -->
+  <g transform="translate(230, 100)">
+    <circle cx="0" cy="0" r="4" fill="#e5e7eb" opacity="0.8"/>
+    <circle cx="8" cy="-2" r="5" fill="#e5e7eb" opacity="0.6"/>
+    <circle cx="16" cy="1" r="4" fill="#e5e7eb" opacity="0.7"/>
+    <circle cx="5" cy="8" r="3" fill="#e5e7eb" opacity="0.5"/>
+    <circle cx="13" cy="10" r="4" fill="#e5e7eb" opacity="0.6"/>
+  </g>
+  
+  <!-- Medical instruments -->
+  <g transform="translate(100, 140)">
+    <!-- Surgical scissors -->
+    <path d="M0 0 L15 15 M0 15 L15 0" stroke="#6b7280" stroke-width="2"/>
+    <circle cx="0" cy="0" r="3" fill="none" stroke="#6b7280" stroke-width="1"/>
+    <circle cx="0" cy="15" r="3" fill="none" stroke="#6b7280" stroke-width="1"/>
+    
+    <!-- Scalpel -->
+    <path d="M25 5 L35 5 L40 0 L35 5 L40 10 L35 5" stroke="#6b7280" stroke-width="2" fill="#6b7280"/>
+    
+    <!-- Forceps -->
+    <path d="M50 0 L60 10 M50 15 L60 5" stroke="#6b7280" stroke-width="2"/>
+  </g>
+  
+  <!-- Shield icon for safety -->
+  <g transform="translate(280, 140)">
+    <path d="M0 0 L8 -5 L16 0 L16 15 Q16 20 8 25 Q0 20 0 15 Z" fill="#22c55e"/>
+    <path d="M4 8 L7 11 L12 6" stroke="white" stroke-width="2" fill="none"/>
+  </g>
+  
+  <!-- Title -->
+  <text x="200" y="280" text-anchor="middle" fill="#166534" font-family="Arial, sans-serif" font-size="14" font-weight="600">
+    Sterilization &amp; Safety
+  </text>
+</svg>

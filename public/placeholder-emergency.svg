@@ -1,0 +1,41 @@
+<svg width="400" height="300" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="300" fill="#fef2f2"/>
+  <rect x="50" y="50" width="300" height="200" rx="8" fill="#fee2e2"/>
+  
+  <!-- Emergency cross -->
+  <g transform="translate(180, 120)">
+    <rect x="15" y="0" width="10" height="40" fill="#dc2626"/>
+    <rect x="0" y="15" width="40" height="10" fill="#dc2626"/>
+  </g>
+  
+  <!-- Heart monitor line -->
+  <g transform="translate(80, 180)">
+    <path d="M0 0 L30 0 L40 -20 L50 40 L60 -30 L70 20 L80 0 L240 0" 
+          stroke="#dc2626" stroke-width="3" fill="none"/>
+  </g>
+  
+  <!-- Medical equipment -->
+  <g transform="translate(120, 80)">
+    <!-- Defibrillator -->
+    <rect x="0" y="0" width="60" height="40" rx="4" fill="#374151"/>
+    <rect x="5" y="5" width="50" height="20" rx="2" fill="#1f2937"/>
+    <circle cx="15" cy="35" r="3" fill="#ef4444"/>
+    <circle cx="45" cy="35" r="3" fill="#22c55e"/>
+    
+    <!-- Cables -->
+    <path d="M15 38 Q20 50 30 45" stroke="#6b7280" stroke-width="2" fill="none"/>
+    <path d="M45 38 Q50 50 60 45" stroke="#6b7280" stroke-width="2" fill="none"/>
+  </g>
+  
+  <!-- Stethoscope -->
+  <g transform="translate(250, 100)">
+    <circle cx="0" cy="0" r="8" fill="#6b7280"/>
+    <path d="M0 8 Q10 20 20 15 Q30 10 25 25" stroke="#6b7280" stroke-width="3" fill="none"/>
+    <circle cx="25" cy="25" r="4" fill="#6b7280"/>
+  </g>
+  
+  <!-- Title -->
+  <text x="200" y="280" text-anchor="middle" fill="#7f1d1d" font-family="Arial, sans-serif" font-size="14" font-weight="600">
+    Emergency Medicine
+  </text>
+</svg>

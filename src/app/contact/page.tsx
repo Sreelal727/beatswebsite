@@ -65,9 +65,57 @@ Preferred Contact: ${data.preferredContact}`;
     setSubmitStatus('idle');
 
     try {
-      // The form will be submitted to Formspree via the action attribute
-      // This is just for UI feedback
-      setSubmitStatus('success');
+      // First, try our API route
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const result = await response.json();
+
+      if (response.ok && result.success) {
+        setSubmitStatus('success');
+        // Reset form on success
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          company: '',
+          subject: '',
+          message: '',
+          preferredContact: 'email'
+        });
+      } else {
+        // If our API fails, try Formspree as fallback
+        console.warn('Primary API failed, trying Formspree fallback:', result.error);
+        
+        const formspreeResponse = await fetch('https://formspree.io/f/manpbogk', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(formData),
+        });
+
+        if (formspreeResponse.ok) {
+          setSubmitStatus('success');
+          // Reset form on success
+          setFormData({
+            name: '',
+            email: '',
+            phone: '',
+            company: '',
+            subject: '',
+            message: '',
+            preferredContact: 'email'
+          });
+        } else {
+          throw new Error('Both primary and fallback submission methods failed');
+        }
+      }
     } catch (error) {
       console.error('Form submission error:', error);
       setSubmitStatus('error');
@@ -133,10 +181,7 @@ Preferred Contact: ${data.preferredContact}`;
                     </div>
                   )}
 
-                  {/* Replace YOUR_FORMSPREE_ID with your actual Formspree form ID */}
                   <form 
-                    action="https://formspree.io/f/manpbogk" 
-                    method="POST"
                     onSubmit={handleSubmit}
                     className="space-y-6"
                   >

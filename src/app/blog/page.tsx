@@ -10,7 +10,7 @@ const blogPosts = [
     date: '2024-01-15',
     category: 'Dental Technology',
     readTime: '5 min read',
-    image: '/placeholder-dental-tech.jpg',
+    image: '/placeholder-dental-tech.svg',
     tags: ['Dental Equipment', 'Innovation', 'AI Technology']
   },
   {
@@ -21,7 +21,7 @@ const blogPosts = [
     date: '2024-01-10',
     category: 'Emergency Medicine',
     readTime: '7 min read',
-    image: '/placeholder-emergency.jpg',
+    image: '/placeholder-emergency.svg',
     tags: ['Emergency Equipment', 'Healthcare', 'Patient Safety']
   },
   {
@@ -32,7 +32,7 @@ const blogPosts = [
     date: '2024-01-05',
     category: 'Medical Imaging',
     readTime: '6 min read',
-    image: '/placeholder-ultrasound.jpg',
+    image: '/placeholder-ultrasound.svg',
     tags: ['Ultrasound', 'Medical Imaging', 'Diagnostics']
   },
   {
@@ -43,7 +43,7 @@ const blogPosts = [
     date: '2023-12-28',
     category: 'Infection Control',
     readTime: '8 min read',
-    image: '/placeholder-sterilization.jpg',
+    image: '/placeholder-sterilization.svg',
     tags: ['Sterilization', 'Infection Control', 'Safety Protocols']
   },
   {
@@ -54,7 +54,7 @@ const blogPosts = [
     date: '2023-12-20',
     category: 'Medical Storage',
     readTime: '5 min read',
-    image: '/placeholder-refrigeration.jpg',
+    image: '/placeholder-refrigeration.svg',
     tags: ['Medical Refrigeration', 'Vaccine Storage', 'Pharmaceuticals']
   },
   {
@@ -65,7 +65,7 @@ const blogPosts = [
     date: '2023-12-15',
     category: 'Physiotherapy',
     readTime: '6 min read',
-    image: '/placeholder-physio.jpg',
+    image: '/placeholder-physio.svg',
     tags: ['Physiotherapy', 'Rehabilitation', 'Patient Recovery']
   }
 ];
