@@ -4,7 +4,7 @@ module.exports = {
       name: 'beatsmed',
       script: 'npm',
       args: 'start',
-      cwd: '/var/www/beatsmed',
+      cwd: '/home/deploy/beatswebsite',
       instances: 'max', // Use all available CPU cores
       exec_mode: 'cluster',
       
@@ -15,9 +15,9 @@ module.exports = {
       },
       
       // Logging
-      log_file: '/var/www/beatsmed/logs/combined.log',
-      out_file: '/var/www/beatsmed/logs/out.log',
-      error_file: '/var/www/beatsmed/logs/error.log',
+      log_file: '/home/deploy/beatswebsite/logs/combined.log',
+      out_file: '/home/deploy/beatswebsite/logs/out.log',
+      error_file: '/home/deploy/beatswebsite/logs/error.log',
       log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
       
       // Auto-restart configuration
@@ -81,11 +81,11 @@ module.exports = {
   // Deployment configuration
   deploy: {
     production: {
-      user: 'ubuntu', // Change to your VPS username
-      host: ['your-server-ip'], // Change to your VPS IP
+      user: 'deploy', // Change to your VPS username
+      host: ['72.60.203.93'], // Change to your VPS IP
       ref: 'origin/main',
       repo: 'https://github.com/yourusername/beatsmed.git', // Change to your repo
-      path: '/var/www/beatsmed',
+      path: '/home/deploy/beatswebsite',
       'pre-deploy-local': '',
       'post-deploy': 'npm ci --production && npm run build && pm2 reload ecosystem.config.js --env production',
       'pre-setup': '',
@@ -93,11 +93,11 @@ module.exports = {
     },
     
     staging: {
-      user: 'ubuntu',
+      user: 'deploy',
       host: ['your-staging-server-ip'],
       ref: 'origin/develop',
       repo: 'https://github.com/yourusername/beatsmed.git',
-      path: '/var/www/beatsmed-staging',
+      path: '/home/deploy/beatswebsite-staging',
       'post-deploy': 'npm ci && npm run build && pm2 reload ecosystem.config.js --env staging',
       'ssh_options': 'StrictHostKeyChecking=no'
     }
